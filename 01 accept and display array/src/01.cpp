@@ -15,12 +15,17 @@ int main() {
 	accept_array(arr) ;
 	display_array(arr) ;
 
+//	int n= sizeof(arr)/sizeof(int)
+		// can use here in local scope  ---- not to be used in function see accept_array(int arr[]) ;
 
 	return 0;
 }
 
 void accept_array( int arr[] )
 {
+
+//	int n = sizeof(arr)/int(size) ;
+			// can not use b/c arr size will be 4 bytes as it is passed as pointer
 
 	for (int i=0 ; i<size ; i++)	{
 		cout<<"Enter array element arr["<<i<<"] :  " ;
