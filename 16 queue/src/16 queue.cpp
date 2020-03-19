@@ -101,7 +101,6 @@ int main() {
 		// here are queue functions
 void leave_element(QUEUE &q)
 {
-	q.front++ ;
 	q.ele[q.front] = 0 ;
 
 	for (int i=q.front ; i<q.rear ; i++)
@@ -110,7 +109,6 @@ void leave_element(QUEUE &q)
 		q.ele[i+1] = 0 ;
 	}
 	q.rear-- ;
-	q.front-- ;
 }
 //--------------------------------------------------------------------
 void peek_element(QUEUE &q)
@@ -121,7 +119,7 @@ void peek_element(QUEUE &q)
 //-----------------------------------------------------------------
 bool is_empti(QUEUE &q)
 {
-	if ( q.front == q.rear )
+	if ( q.front == q.rear+1 )
 		return true ;
 	else
 		return false ;
@@ -160,7 +158,7 @@ void display(QUEUE &q)
 void init_queue(QUEUE &q)
 {
 	q.rear = -1 ;
-	q.front = -1 ;
+	q.front = 0 ;
 	for (int i=0 ; i<size ; i++)
 		q.ele[i] = 0 ;
 }
