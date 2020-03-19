@@ -115,7 +115,7 @@ void leave_element(QUEUE &q)
 //--------------------------------------------------------------------
 void peek_element(QUEUE &q)
 {
-	cout<<"\PEEK ed value is  : "<<q.ele[q.rear] << endl  ;			// display ELEMENT
+	cout<<"\PEEK ed value is  : "<<q.ele[q.front] << endl  ;			// display ELEMENT
 	cout<<endl ;
 }
 //-----------------------------------------------------------------
